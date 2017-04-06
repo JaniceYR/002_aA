@@ -76,3 +76,41 @@ describe "#stock_picker" do
     expect(stock_picker([6, 4, 1, 3, 2])).to eq([2, 3])
   end
 end
+
+describe Hanoi do
+  let(:tower) { Hanoi.new }
+  describe "#initialize" do
+    it 'creates 3 piles' do
+      expect(tower.piles.length).to eq(3)
+    end
+
+    it 'creates 3 disks in the first pile' do
+      expect(tower.piles[0]).to eq([3, 2, 1])
+    end
+  end
+
+  describe "#move" do
+
+    it 'raises error when trying to move a disc from an empty pile' do
+      expect{ tower.move(2, 3) }.to raise_error('There is no disc to move')
+    end
+
+    it 'raise error when trying to move larger disc onto smaller disc' do
+      tower.move(0,1)
+      expect{ tower.move(0,1) }.to raise_error('Can\'t move larger dise to smaller disc')
+    end
+
+    it 'moves disc to valid pile' do
+      tower.move(0,1)
+      expect(tower.piles).to eq([[3,2], [1], []])
+    end
+
+  end
+
+  describe "#won?" do
+    it 'evaluates to true only when we move all the discs to the 2nd or 3rd pile' do
+      tower.piles = [[],[],[3,2,1]]
+      expect(tower.won?).to be true 
+    end
+  end
+end

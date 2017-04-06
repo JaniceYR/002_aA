@@ -58,3 +58,36 @@ def stock_picker(array)
   return [] if diff == 0
   [best_buy_day, best_sell_day]
 end
+
+class Hanoi
+  attr_accessor :piles
+
+  def initialize
+    @piles = [[3,2,1],[],[]]
+  end
+
+  def move(from_pile, to_pile)
+    raise 'There is no disc to move' if @piles[from_pile].empty?
+    unless @piles[to_pile].empty?
+      if @piles[to_pile][-1] < @piles[from_pile][-1]
+        raise 'Can\'t move larger dise to smaller disc'
+      end
+    end
+    @piles[to_pile] << @piles[from_pile].pop
+  end
+
+  def won?
+    @piles[1] == [3,2,1] || @piles[2] == [3,2,1]
+  end
+
+  def play
+    until won?
+      get_information
+    end
+
+  end
+
+  def get_information
+
+  end
+end
