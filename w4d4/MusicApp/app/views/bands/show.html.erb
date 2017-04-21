@@ -1,0 +1,19 @@
+<h1>Band Profile</h1>
+<%= link_to "<< Band index", bands_url %>
+<p><h2>
+  Band name: <%= @band.name %>
+</h2></p>
+
+<% @band.albums.each do |album| %>
+  <p><%= link_to "#{album.name}", album_url(album) %>
+<% end %>
+
+<br>
+<br>
+<br>
+<br>
+-------------------------------------------
+<br>
+<%= link_to "Edit Band", edit_band_url(@band) %>
+<br>
+<%= link_to "Add new Album", new_band_album_url(@band) %>

@@ -1,0 +1,13 @@
+<h1>Log in!</h1>
+
+<form action="/session" method="POST">
+  <input
+      type="hidden"
+      name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+
+  Email : <input type="text" name="users[email]">
+  <br>
+  Password : <input type="password" name="users[password]">
+  <%= button_to "Login", new_session_url, method: :POST%>
+</form>

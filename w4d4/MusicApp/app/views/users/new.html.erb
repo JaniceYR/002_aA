@@ -1,0 +1,13 @@
+<h1>Sign up!</h1>
+
+<form action="/users" method="POST">
+  <input
+      type="hidden"
+      name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+
+  Email : <input type="text" name="users[email]">
+  <br>
+  Password : <input type="password" name="users[password]">
+  <%= button_to "Join", users_url, method: :post%>
+</form>

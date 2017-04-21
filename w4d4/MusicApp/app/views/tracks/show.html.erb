@@ -1,0 +1,11 @@
+<h1>Track Details</h1>
+<%= link_to "<< Go Back to \"#{@track.album.name}\" Album", album_url(@track.album) %>
+<p><h2>
+  Band name: <%= @track.album.band.name %><br>
+  Album name: <%= @track.album.name %><br>
+  Track name: <%= @track.name %>
+</h2></p>
+
+<p>
+  Track Type: <%= @track.track_type %><br>
+  Lyrics: <%= @track.lyrics %>

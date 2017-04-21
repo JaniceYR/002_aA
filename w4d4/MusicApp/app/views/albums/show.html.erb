@@ -1,0 +1,20 @@
+<h1>Album Details</h1>
+<%= link_to "<< Go Back to \"#{@album.band.name}\" Band", band_url(@album.band) %>
+<p><h2>
+  Band name: <%= @album.band.name %><br>
+  Album name: <%= @album.name %>
+</h2></p>
+
+<% @album.tracks.each do |track| %>
+  <p><%= link_to "#{track.name}", track_url(track) %>
+<% end %>
+
+<br>
+<br>
+<br>
+<br>
+-------------------------------------------
+<br>
+<%= link_to "Edit Album", edit_album_url(@album) %>
+<br>
+<%= link_to "Add Tracks", new_track_url %>

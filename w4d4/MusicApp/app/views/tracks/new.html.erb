@@ -1,0 +1,25 @@
+<h1>Add Track</h1>
+
+<form action="/tracks" method="POST">
+  <input
+      type="hidden"
+      name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+
+  Track Name : <input type="text" name="tracks[name]">
+  <br>
+  Album Name :
+  <select name="tracks[album_id]">
+    <% Album.all.each do |album| %>
+      <option value="<%= album.id %>"> <%= album.name %> </option>
+    <% end %>
+  </select>
+  <br>
+  Track Type :
+  Regular <input type="radio" name="tracks[tracks_type]" value="regular" checked>
+  Bonus <input type="radio" name="tracks[tracks_type]" value="bonus">
+  <br>
+  Lyrics :
+  <textarea name="tracks[lyrics]"></textarea>
+  <br>
+  <%= button_to "Add", tracks_url, method: :POST %>
