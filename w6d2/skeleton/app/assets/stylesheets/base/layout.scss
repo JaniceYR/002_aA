@@ -1,0 +1,83 @@
+/* Define application-wide selectors here!*/
+
+html {
+	position: relative;
+	height: 100%;
+}
+
+body {
+	// ...
+	width: 80%;
+	margin: 0 auto;
+	font-family: $serif;
+	font-size: 12px;
+}
+
+button {
+	background-color: #6288A5;
+	border: 1px solid #6288A5;
+	border-radius: 3px;
+	color: #fff;
+	display: inline-block;
+	font-size: 1em;
+	font-family: nyt-franklin, sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	padding: 6px 10px 6px;
+	text-transform: none;
+	text-decoration: none;
+	margin: 2px;
+  height: 18px;
+	// float: left;
+	// transition:
+	// text-transform:
+	// text-align:
+}
+
+button:hover {
+	// background-color:
+	// border-color:
+	background-color: #326891;
+	border: 1px solid #326891;
+	text-decoration: none;
+}
+
+.search_button {
+	color: #333;
+  background-color: transparent;
+  border: none;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+.search_button:hover {
+  background-color: #f7f7f5;
+	border: none;
+  border: 1px solid transparent;
+}
+.gear_button {
+	font-size: 20px;
+	padding: 7px 10px 6px;
+}
+/*
+	Header Rules
+*/
+
+hr {
+	border: 0;
+	height: 1px;
+	background-color: $light-gray;
+}
+
+.hr-top, .hr-bottom {
+	width: 100%;
+	margin: 0;
+}
+
+.hr-top {
+	height: 2px;
+	margin-bottom: 1px;
+}
+
+.hidden {
+	visibility: hidden;
+}
