@@ -1,0 +1,79 @@
+/*html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small {
+  font: sans-serif;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+  list-style: none;
+}*/
+
+div {
+  font-family: 'Slabo 27px', serif;
+  display: block;
+  justify-content: flex-start;
+  margin: 10px;
+}
+.clock {
+  color: gray;
+  width: 400px;
+  /*border: 1px solid gray;*/
+  padding: 30px;
+  background-image: url(https://static.brusheezy.com/system/resources/premium_previews/000/055/612/non_2x/hand-drawn-flower-pattern-photoshop-patterns.jpg);
+}
+.clock_inside{
+  font-size: 25pt;
+  font-weight: bold;
+  color: gray;
+  width: 100%
+  height:auto;
+  padding: 10px;
+  background-color: white;
+}
+.clock p{
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather{
+  color: gray;
+  width: 400px;
+  padding: 30px;
+  background-image: url(https://s-media-cache-ak0.pinimg.com/originals/38/84/c8/3884c842efaa67c027ce860b363bad49.jpg);
+}
+.weather_inside{
+  font-size: 25pt;
+  font-weight: bold;
+  color: gray;
+  width: 100%
+  height:auto;
+  padding: 10px;
+  background-color: white;
+}
+.weather p{
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.autocomplete{
+  width: 200px;
+  padding: 30px;
+  margin: 20px;
+  border: 1px solid gray;
+  font-size: 15pt;
+  color: gray;
+  width: 100%
+  height:auto;
+  padding: 10px;
+  background-color: white;
+}
+.height_input{
+  line-height: 28px;
+  width: 70%
+}
